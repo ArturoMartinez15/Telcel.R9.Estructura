@@ -1,0 +1,34 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.21005.1
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telcel.R9.Estructura.Negocio", "Telcel.R9.Estructura\Telcel.R9.Estructura.Negocio.csproj", "{FC66D76D-266F-41B8-88CC-2134DF8B9D0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telcel.R9.Estructura.AccesoDatos", "Telcel.R9.Estructura.AccesoDatos\Telcel.R9.Estructura.AccesoDatos.csproj", "{6D4669AF-9808-4676-B158-D69B9BF5FA0A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Telcel.R9.Estructura.Presentacion", "Telcel.R9.Estructura.Presentacion\Telcel.R9.Estructura.Presentacion.csproj", "{AAF28523-BFF8-48EB-958B-8635F7E8882F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{FC66D76D-266F-41B8-88CC-2134DF8B9D0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FC66D76D-266F-41B8-88CC-2134DF8B9D0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FC66D76D-266F-41B8-88CC-2134DF8B9D0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FC66D76D-266F-41B8-88CC-2134DF8B9D0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D4669AF-9808-4676-B158-D69B9BF5FA0A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D4669AF-9808-4676-B158-D69B9BF5FA0A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D4669AF-9808-4676-B158-D69B9BF5FA0A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D4669AF-9808-4676-B158-D69B9BF5FA0A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{AAF28523-BFF8-48EB-958B-8635F7E8882F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{AAF28523-BFF8-48EB-958B-8635F7E8882F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{AAF28523-BFF8-48EB-958B-8635F7E8882F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{AAF28523-BFF8-48EB-958B-8635F7E8882F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

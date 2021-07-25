@@ -1,0 +1,37 @@
+﻿@model Telcel.R9.Estructura.Departamento
+@{
+    ViewBag.Title = "GetAll";
+}
+
+<h2>GetAll</h2>
+<div class="container">
+    <div class="row">
+        <div style="float:right; margin-bottom:1rem;">
+            @Html.ActionLink("+", "Form", "Producto", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>Editar</td>
+                    <td class="hidden">DepartamentoId</td>
+                    <td>Descripcion</td>
+                    <td>Eliminar</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Telcel.R9.Estructura.Departamento departamento in Model.Departamentos)
+                {
+                    <tr>
+                        <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Producto", new { DepartamentoId = departamento.DepartamentoId})"></a></td>
+                        <td class="hidden">@departamento.DepartamentoId</td>
+                        <td>@departamento.Descripcion</td>
+
+
+                        <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Producto", new { DepartamentoId= departamento.DepartamentoId})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');" ;></a></td>
+                    </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>

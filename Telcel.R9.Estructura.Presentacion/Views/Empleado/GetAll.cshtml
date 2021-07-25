@@ -1,0 +1,64 @@
+﻿@model Telcel.R9.Estructura.Empleado
+@{
+    ViewBag.Title = "GetAll";
+}
+
+<h2>GetAll</h2>
+
+<div class="container">
+    <div class="row">
+        @using (Html.BeginForm("GetAll", "Usuario", FormMethod.Post, new { enctype = "multipart/form-data" }))
+        {
+
+        <div class="row">
+          
+            <div class="col-md-3">
+                @Html.TextBoxFor(model => model.Nomnre, new { @class = "form-control", @placeholder = "Nombre" })
+                @Html.ValidationMessageFor(model => model.Nomnre)
+            </div>
+
+            <div class="col-md-1">
+                <input type="submit" value="Buscar" class="btn btn-info" />
+            </div>
+
+        </div>
+
+                }
+            
+        </div>
+    </div>
+
+<div class="container">
+    <div class="row">
+        <div style="float:right; margin-bottom:1rem;">
+            @Html.ActionLink("+", "Form", "Empleado", htmlAttributes: new { @class = "btn btn-success" })
+        </div>
+
+        <table class="table table-bordered table-responsive">
+            <thead>
+                <tr>
+                    <td>Editar</td>
+                    <td class="hidden">EmpleadoId</td>
+                    <td>Nombe Empleado</td>
+                    <td>DescripcionPuesto</td>
+                    <td>DescripcionDepartamento</td>
+                    <td>Eliminar</td>
+                </tr>
+            </thead>
+            <tbody>
+                @foreach (Telcel.R9.Estructura.Empleado empleado in Model.Empleados)
+                {
+                <tr>
+                    <td><a class="btn btn-warning glyphicon glyphicon-edit" href="@Url.Action("Form", "Empleado", new { EmpleadoId = empleado.EmpleadoId})"></a></td>
+                    <td class="hidden">@empleado.EmpleadoId</td>
+                    <td>@empleado.Nomnre</td>
+                    <td>@empleado.puesto.Descripcion</td>
+                    <td>@empleado.departamento.Descripcion</td>
+
+                    <td><a class="btn btn-danger glyphicon glyphicon-trash" href="@Url.Action("Delete", "Empleado", new { EmpleadoId= empleado.EmpleadoId})" onclick="return confirm('Estas seguro que deseas eliminar este registro?');" ;></a></td>
+                </tr>
+                }
+            </tbody>
+        </table>
+    </div>
+</div>
